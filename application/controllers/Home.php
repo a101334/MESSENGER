@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Message extends CI_Controller {
+class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('message_view');
+		$this->load->view('home');
 	}
 }
