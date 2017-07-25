@@ -29,6 +29,8 @@ class InsertUser extends CI_Controller
 
 	public function index()
 	{
+		$this->load->view('header');
+
 		$name = NULL;
 		$birthday = NULL;
 		$biography = NULL;
@@ -65,6 +67,8 @@ class InsertUser extends CI_Controller
 		}
 
 		$this->load->view('insert_user');
+
+		//$this->load->view('footer');
 	}
 
 }

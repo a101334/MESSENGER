@@ -12,6 +12,7 @@ class Home extends CI_Controller
 
 	public function index()
 	{
+		$this->load->view('header');
 
 		$id_user = NULL;
 
@@ -38,5 +39,7 @@ class Home extends CI_Controller
 
 		$data['results'] = $this->Model->getUsers($data);
 		$this->load->view('home', $data);
+
+		$this->load->view('footer');
 	}
 }

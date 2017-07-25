@@ -12,6 +12,10 @@ class Message extends CI_Controller
 
 	public function index()
 	{
+		$this->load->view('header');
+
 		$this->load->view('message_view');
+
+		$this->load->view('footer');
 	}
 }

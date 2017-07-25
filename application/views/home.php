@@ -23,16 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="col-md-8">
-                    <div class="row">
-            	       <h1 style="text-align:center;">Welcome</h1><br>
-                    </div>
 
                     <div class="row form-group col-md12">
 
                     <form action="Message" method="POST">
 
                         <div class="form-group">
-                            <label for="exampleSelect1">Select User</label>
+                            <label for="exampleSelect1">SELECT USER</label>
                             <select class="form-control" id="exampleSelect1">
                                 <?php 
                                     foreach($results as $user)
@@ -44,16 +41,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                           </div>
 
                           <div class="form-group">
-                            <label for="exampleTextarea">Text Message</label>
+                            <label for="exampleTextarea">TEXT MESSAGE</label>
                             <textarea class="form-control" id="exampleTextarea" rows="4" cols="100"></textarea>
                           </div>
-                          <button type="submit" class="btn btn-primary" name="send-message">Send Message</button>
+                          <button type="submit" class="btn btn-success" name="send-message">SEND MESSAGE</button>
 
                     </form>
 
                     </div>
 
                     <h1 style="text-align:center;">Contact List</h1>
+
                 	<table class="table">
 
                     <thead class="thead-inverse">
@@ -106,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             
             </div>
         </div>
-    </div>
+    </div><br>
 	 <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

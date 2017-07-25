@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <button type="submit" name="submit" class="btn btn-success" value="REGISTER">REGISTER</button>
               </form>
-              <br><button type="button" class="btn btn-primary">Back</button>
+                    
         </div>
     
         <div class="col-md-2">
