@@ -45,8 +45,17 @@ class Model extends CI_Model
 		return $query->result_array();
 	}
 
-	public function dissableUser($params)
+	public function editUser($params)
 	{
 		
+	}
+	
+	public function dissableUser($params)
+	{
+		$fildset = array('view' => 0);
+		$condition = array('id_user' => $params['id_user']);
+
+		$this->db->where($condition);
+		$this->db->update($this->tableUsers, $fildset);
 	}
 }

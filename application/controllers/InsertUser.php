@@ -35,21 +35,28 @@ class InsertUser extends CI_Controller
 		$params['phone'] = $phone;
 
 
-		// if(isset($submit))
-		// {	
-		// 	try
-		// 	{
-		// 		$this->Model->RegisterUser($params);
-		// 		echo "Register User Successflly!!<br>";
-		// 		$submit = NULL;
-		// 	}
+		if(isset($submit))
+		{	
+			switch ($submit)
+			{
 
-		// 	catch(Execption $e)
-		// 	{
-		// 		echo "Register User Failed : " . $e->getMessage();
-		// 	}
-		// }
+				case 'REGISTER':
+				{
+						$this->Model->RegisterUser($params);
+						echo "Register User Successflly!!<br>";
+						$submit = NULL;
+					
+				}break;
 
-		$this->load->view('insert_user/index');
+				case 'EDIT':
+				{
+					echo "Make update!!<br>";
+				}break;
+
+			}
+		}
+
+		$this->load->view('insert_user');
 	}
+
 }

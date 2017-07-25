@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ViewUser extends CI_Controller 
+class UpdateUser extends CI_Controller 
 {
 	public function __construct()
 	{
@@ -41,7 +41,7 @@ class ViewUser extends CI_Controller
 
 			$data['results'] = $this->Model->viewUserInformation($data);
 
-		$this->load->view('view_user', $data);
+		$this->load->view('update_user');
 
 	}
 }

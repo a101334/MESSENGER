@@ -12,6 +12,6 @@ class Message extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('message_view/index');
+		$this->load->view('message_view');
 	}
 }

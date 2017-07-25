@@ -12,9 +12,17 @@ class Home extends CI_Controller
 
 	public function index()
 	{
-		$name = NULL;
+
+		$id_user = NULL;
 
 		extract($_POST);
+		$params['id_user'] = $id_user;
+
+		;
+		if(isset($delete))
+		{	
+			$this->Model->dissableUser($params);
+		}
 
 		$data['fildset'] = array(
 									'id_user',
@@ -29,6 +37,6 @@ class Home extends CI_Controller
 		$data['order'] = 'id_user asc';
 
 		$data['results'] = $this->Model->getUsers($data);
-		$this->load->view('home/index', $data);
+		$this->load->view('home', $data);
 	}
 }

@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </td>
 
                 <td>
-                    <form action="home" method="POST">
+                    <form action="updateUser" method="POST">
                         <input type="number" name="id_user" hidden value="<?php echo $user['id_user'] ?>">
                         <input type="submit" name="edit" value="EDIT">
                     </form>
@@ -46,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <td>
                     <form action="home" method="POST">
                         <input type="number" name="id_user" hidden value="<?php echo $user['id_user'] ?>">
-                        <input type="submit" name="delete" value="DELETE">
+                        <input type="submit" name="delete" value="DELETE1">
                     </form>
                 </td>
 
