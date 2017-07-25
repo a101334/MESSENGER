@@ -8,11 +8,29 @@ class InsertUser extends CI_Controller
 		parent::__construct();
 
 		$this->load->model(array('Model'));
+		// $this->load->library('form_validation');
+
+		// $config = array(
+		// 					array(
+		// 							'fildset' => 'name',
+		// 							'label' => 'NAME',
+		// 							'rules' => 'required',
+		// 							'error' => array(
+		// 												'required' => 'Please input %s',
+		// 											),
+
+		// 						 )
+
+
+		// 			   );
+
+		// $this->form_validation->set_rules($config);
 	}
 
 	public function index()
 	{
 		$name = NULL;
+		$birthday = NULL;
 		$biography = NULL;
 		$cep = NULL;
 		$street = NULL;
@@ -25,6 +43,7 @@ class InsertUser extends CI_Controller
 		extract($_POST);
 
 		$params['name'] = $name;
+		$params['birthday'] = $birthday;	
 		$params['biography'] = $biography;
 		$params['cep'] = $cep;
 		$params['street'] = $street;
@@ -33,27 +52,16 @@ class InsertUser extends CI_Controller
 		$params['city'] = $city;
 		$params['state'] = $state;
 		$params['phone'] = $phone;
-
-
+		
+		
 		if(isset($submit))
 		{	
-			switch ($submit)
-			{
 
-				case 'REGISTER':
-				{
-						$this->Model->RegisterUser($params);
-						echo "Register User Successflly!!<br>";
-						$submit = NULL;
-					
-				}break;
+			$this->Model->RegisterUser($params);
+			echo "Register User Successflly!!<br>";
+			$submit = NULL;
+			$params = NULL;
 
-				case 'EDIT':
-				{
-					echo "Make update!!<br>";
-				}break;
-
-			}
 		}
 
 		$this->load->view('insert_user');

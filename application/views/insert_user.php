@@ -86,30 +86,102 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   </head>
 <body>
-	<h1>INSERT USER</h1><br>
+  <div class="container">
 
-    <!-- Inicio do formulario -->
-      <form form action="InsertUser" method="POST">
-        <label>Name:</label> <input type="text" name="name"><br>
-        <label>Birthday:</label> <input type="date" name="birthday"><br>
-        <label>Biography:</label> <input type="text" name="biography"><br>
-        <label>Cep:
-        <input name="cep" type="text" id="cep" value="" size="10" maxlength="8" /></label><br />
-        <label>Street:
-        <input name="street" type="text" id="rua" size="60" /></label>
-        <label>Numero:
-        <input name="num" type="number" style="width: 5em"; /></label><br/>
-        <label>Neigborhood:
-        <input name="neighborhood" type="text" id="bairro" size="40" /></label><br />
-        <label>City:
-        <input name="city" type="text" id="cidade" size="40" /></label><br />
-        <label>State:
-        <input name="state" type="text" id="uf" size="2" /></label><br />
-        <label>Phone:</label> <input type="text" name="phone"><br>
+  <div class="row">
 
-        <input type="submit" name="submit" value="REGISTER">
-      </form>
-      <br><button type="button" class="btn btn-primary">Back</button>
+    <div class="col-md-2">
+  
+    </div>
+
+    <div class="col-md-8" >
+        	<h1 style="text-align:center;"><strong>INSERT USER</strong></h1><br>
+
+            <!-- Inicio do formulario -->
+              <form form action="InsertUser" method="POST">
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>NAME</strong></label>
+                  <div class="col-9">
+                    <input class="form-control" type="text" name="name">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-date-input" class="col-3 col-form-label"><strong>BIRTHDAY</strong></label>
+                   
+                  <div class="col-9">
+                    <input class="form-control" type="date" name="birthday">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>BIOGRAPHY</strong></label>
+                  <div class="col-9">
+                    <input class="form-control" type="text" name="biography">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>CEP</strong></label>
+                  <div class="col-9">
+                    <input class="form-control"  name="cep" type="text" id="cep" value="" size="10" maxlength="8">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>STREET</strong></label>
+                  <div class="col-6">
+                    <input class="form-control"  name="street" type="text" id="rua" size="60" >
+                  </div>
+
+                  <label for="example-text-input" class="col-2 col-form-label"><strong>NUMBER</strong></label>
+                  <div class="col-1">
+                    <input class="form-control"  name="num" type="number" style="width: 5em"; >
+                  </div>
+
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>NEIGHBORHOOD</strong></label>
+                  <div class="col-9">                                                
+                    <input class="form-control"  name="neighborhood" type="text" id="bairro" size="40" >
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>CITY</strong></label>
+                  <div class="col-9">
+                    <input class="form-control"  name="city" type="text" id="cidade" size="40">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>STATE</strong></label>
+                  <div class="col-9">
+                    <input class="form-control"  name="state" type="text" id="uf" size="2" >
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="example-text-input" class="col-3 col-form-label"><strong>PHONE:</strong></label>
+                  <div class="col-9">
+                    <input class="form-control"  type="text" name="phone">
+                  </div>
+                </div>
+
+                <button type="submit" name="submit" class="btn btn-success" value="REGISTER">REGISTER</button>
+              </form>
+              <br><button type="button" class="btn btn-primary">Back</button>
+        </div>
+    
+        <div class="col-md-2">
+          
+        </div>
+
+      </div>
+</div>
 
 
 	 <!-- jQuery first, then Tether, then Bootstrap JS. -->

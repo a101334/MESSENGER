@@ -14,7 +14,8 @@ class Model extends CI_Model
 	public function registerUser($params)
 	{
 		$fildset = array( 
-							'name' => $params['name'], 
+							'name' => $params['name'],
+							'birthday' => $params['birthday'], 
 							'biography' => $params['biography'],
 							'cep' => $params['cep'],
 							'street' => $params['street'],
