@@ -12,11 +12,12 @@ birthday DATE NOT NULL,
 biography VARCHAR (100) NOT NULL,
 cep INT (8) NOT NULL,
 street VARCHAR (40) NOT NULL,
-num INT NOT NULL,
+num INT DEFAULT '0',
 neighborhood VARCHAR (40) NOT NULL,
 city VARCHAR (40) NOT NULL,
 state CHAR(2) NOT NULL,
 phone VARCHAR (15) NOT NULL,
+view tinyint(1) NOT NULL DEFAULT '1', #view = 1 enable show user, view = 0 disable show user
 
 PRIMARY KEY (id_user)
 )ENGINE=InnoDB;
