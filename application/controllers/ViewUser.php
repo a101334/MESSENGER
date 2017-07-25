@@ -5,7 +5,6 @@ class ViewUser extends CI_Controller
 {
 	public function __construct()
 	{
-		$this->load->view('header');
 		parent::__construct();
 
 		$this->load->model(array('Model'));
@@ -13,6 +12,7 @@ class ViewUser extends CI_Controller
 
 	public function index()
 	{
+		$this->load->view('header');
 		$id_user = NULL;
 
 		extract($_POST);
@@ -41,7 +41,6 @@ class ViewUser extends CI_Controller
 								);
 
 			$data['results'] = $this->Model->viewUserInformation($data);
-
 		$this->load->view('view_user', $data);
 
 		$this->load->view('footer');

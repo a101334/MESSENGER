@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="form-group row">
                   <label for="example-text-input" class="col-3 col-form-label"><strong>CEP</strong></label>
                   <div class="col-9">
-                    <input class="form-control"  name="cep" type="text" id="cep" value="" size="10" maxlength="8" disabled value="<?php echo $user['cep']?>">
+                    <input class="form-control"  disabled value="<?php echo $user['cep']?>">
                   </div>
                 </div>
 
@@ -108,8 +108,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input class="form-control"  type="text" name="phone" disabled value="<?php echo $user['phone']?>">
                   </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary" >BACK</button>
               </form>
         </div>
     
